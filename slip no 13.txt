@@ -1,0 +1,49 @@
+
+Q1
+<html>
+<body>
+<h3>Chess Board using Nested For Loop</h3>
+<table width="270px" cellspacing="0px" cellpadding="0px" border="1px">
+
+<?php
+for($row=1;$row<=8;$row++)
+{
+echo "<tr>";
+for($col=1;$col<=8;$col++)
+{
+$total=$row+$col;
+if($total%2==0)
+{
+echo "<td height=30px width=30px bgcolor=white></td>";
+}
+else
+{
+echo "<td height=30px width=30px bgcolor=black></td>";
+}
+}
+echo "</tr>";
+}
+?>
+</table>
+</body>
+</html>
+
+Q2 B.
+
+
+import numpy as np
+
+
+arr = np.array([[0, 1], [2, 3]])
+
+
+flattened_arr = arr.flatten()
+
+
+max_value = np.max(flattened_arr)
+
+
+min_value = np.min(flattened_arr)
+
+print("Maximum value in the array is:", max_value)
+print("Minimum value in the array is:", min_value)

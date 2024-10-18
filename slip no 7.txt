@@ -1,0 +1,40 @@
+Q1
+<html>
+  <head>
+    <style>
+      .navbar {
+        display: flex;
+        background-color: #d1d5db;
+      }
+      .navbar a {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+      }
+      .navbar .home {
+        background-color: #6b7280;
+        color: white;
+        font-weight: bold;
+      }
+      .navbar a:not(.home) {
+        color: #2563eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#" class="home">Home</a>
+      <a href="#">Java</a>
+      <a href="#">HTML</a>
+      <a href="#">CSS</a>
+    </div>
+  </body>
+</html>
+
+Q2
+import pandas as p
+from sklearn import preprocessing
+d = pd.read_csv('D:\\yogita\\Data.csv')
+label_encoder = preprocessing.LabelEncoder()
+d['purchased']= label_encoder.fit_transform(d['purchased'])
+one_hot_encoded_data = p.get_dummies(d, columns = ['country'])
+print(one_hot_encoded_data)

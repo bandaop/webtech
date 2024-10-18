@@ -1,0 +1,72 @@
+Q1
+<html>
+  <body>
+    <form action="seta2_1.php" method="POST">
+      Enter string<input type="text" name="txt1" /><br />
+      Enter your choice<br />&nbsp&nbsp select first 5 words of string<input
+        type="radio"
+        name="op"
+        value="five"
+      />
+      <br />
+      convertcase<input type="radio" name="op" value="convert" /><br />
+      pad the string<input type="radio" name="op" value="pad" /><br />
+      Remove leading white spaces<input
+        type="radio"
+        name="op"
+        value="sp"
+      /><br />
+      reverse th string<input type="radio" name="op" value="rev" /><br />
+      <input type="submit" value="check" />
+    </form>
+  </body>
+</html>
+
+<?php
+include("seta2_2.php");
+$x=$_POST['txt1'];
+$y=$_POST['op'];
+if($y=="five")
+{
+echo implode(' ', array_slice(explode(' ', $x), 0, 5));
+}
+else
+if($y=="convert")
+{
+echo "lowercase of string".strtolower($x)."<br>"; echo "upper case of string
+is".strtoupper($x)."<br />"; } else if($y=="pad") {
+$p=str_pad($x,15,"*",STR_PAD_BOTH); echo "padded string is".$p."<br />"; } else
+if($y=="sp") { echo "after removing white spaces from begining".ltrim($x); }
+else if($y=="rev") { echo "after reverse the string".strrev($x); } else
+echo"invalid choice"; ?>
+
+Q2A)
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import colors
+from matplotlib.ticker import PercentFormatter
+no_of_balls=50
+x = np.random.randn(50)
+y = np.random.randn(50)
+colors = [np.random.randint(1, 4) for i in range(no_of_balls)]
+plt.plot(x,y)
+plt.show()
+plt.scatter(x,y,c=colors)
+plt.show()
+
+
+
+
+
+Q2B)
+from matplotlib import pyplot as plt
+import numpy as np
+# Creating dataset
+subjects = ['TCS', 'Data Science', 'OS',
+ 'JAVA', 'PHP', 'Python']
+marks = [23, 17, 35, 29, 12, 33]
+# Creating plot
+fig = plt.figure(figsize =(10, 7))
+plt.pie(marks, labels = subjects)
+# show plot
+plt.show()

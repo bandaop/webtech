@@ -1,0 +1,49 @@
+Q1
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Company Profile</title>
+    <style>
+      /* CSS Styles */
+      .company-name {
+        background-color: green;
+        color: red;
+        font-size: 36px;
+        font-family: "Comic Sans MS";
+      }
+
+      .company-description {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="company-name">Infosys</h1>
+    <p class="company-description">
+      Infosys Limited is an Indian multinational information technology company
+      that provides business consulting, information technology and outsourcing
+      services. The company was founded in Pune and is headquartered in
+      Bangalore.[5] Infosys is the second-largest Indian IT company, after Tata
+      Consultancy Services, by 2020 revenue figures, and the 602nd largest
+      public company in the world, according to the Forbes Global 2000
+      ranking.[6] On 24 August 2021, Infosys became the fourth Indian company to
+      reach $100 billion in market capitalization.
+    </p>
+  </body>
+</html>
+
+Q2A.
+import pandas as p
+d=p.read_csv('C:\\Users\\DELL\\Untitled Folder\\Iris.csv')
+#remove id field from iris dataset
+new_data = d[["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"]] 
+print(new_data)
+plt.figure(figsize = (10, 7))
+new_data.boxplot()
+Q2B.
+import pandas as p
+df = pd.read_csv('C:\\Users\\DELL\\ht&wt.csv')
+df.shape # no.of rows & cols
+df.describe() #stats data
+df.info() #features
+df.dtypes

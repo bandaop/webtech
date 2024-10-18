@@ -1,0 +1,85 @@
+Q1
+<html>
+<head>
+<style>
+body
+ {
+background:yellow;
+color:red;
+ } 
+h1{ 
+color:red;
+ font-family:times new roman;
+ font-size:20pt;
+ text-align:center;
+ text-transform:uppercase;
+
+ 
+ }
+ form
+ {
+    height: 80vh;
+    width: 30vw;
+    background-color: skyblue;
+ border-style:dotted;
+ }
+ #sub{
+    background-color: green;
+    color: white;
+    border: 0;
+    padding: 0.8vw 1.2vw;
+ }
+ #clr{
+    background-color: blue;
+    color: white;
+    border: 0;
+    padding: 0.8vw 1.2vw;
+ }
+ 
+</style>
+
+    <form>
+        <a href="#"><h1>Project Management</h1></a>
+        <p>Project Name :- <input type="text" placeholder="Project Name" id=""></p>
+        <br>
+        <p>Assigned To :- <input type="text" placeholder="Er Merry petision" id=""></p>
+        <br>
+        <p>Start Date :- <input type="date" name="" id=""></p>
+        <br>
+        <p>End Date :- <input type="date" name="" id=""></p>
+        <br>
+        <p>Priority:-  <input type="radio" name="A" id="">High <input type="radio" name="A" id="">Arerage <input type="radio" name="A" id="">
+        Low </p>
+        <br>
+        <p>Descrption:- <textarea name="" id=""></textarea>
+        <br>
+       <center>
+        <input type="submit" value="submit" id="sub">
+        <input type="reset" value="Clear" id="clr">
+       </center>
+        </form>
+
+</body>
+</html>
+
+
+Q2A.
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+d = pd.read_csv('C:\\Users\\DELL\\Untitled Folder\\Iris.csv')
+ax=plt.subplots(1,1,figsize=(10,8)) //defines size of chart area
+d['Species'].value_counts().plot.pie() //counts distinct values in dataset
+plt.title("Iris Species %")
+plt.show()
+
+
+
+B.
+import pandas as p
+df = pd.read_csv('C:\\Users\\DELL\\winequality-red.csv')
+df.shape # no.of rows & cols
+df.describe() #stats data
+df.info() #features
+df.dtypes

@@ -1,0 +1,85 @@
+Q1)
+
+
+<?php
+
+echo "Enter a sentence: ";
+$sentence = trim(fgets(STDIN));
+
+echo "Enter a word: ";
+$word = trim(fgets(STDIN));
+
+echo "Enter the position to delete from: ";
+$deletePos = (int) trim(fgets(STDIN));
+
+echo "Enter the number of characters to delete: ";
+$deleteCount = (int) trim(fgets(STDIN));
+
+$sentenceDeleted = substr_replace($sentence, '', $deletePos, $deleteCount);
+echo "Sentence after deletion: $sentenceDeleted\n";
+
+echo "Enter the position to insert at: ";
+$insertPos = (int) trim(fgets(STDIN));
+
+$sentenceInserted = substr_replace($sentence, $word, $insertPos, 0);
+echo "Sentence after insertion: $sentenceInserted\n";
+
+echo "Enter the position to replace from: ";
+$replacePos = (int) trim(fgets(STDIN));
+
+echo "Enter the number of characters to replace: ";
+$replaceCount = (int) trim(fgets(STDIN));
+
+$sentenceReplaced = substr_replace($sentence, $word, $replacePos, $replaceCount);
+echo "Sentence after replacement: $sentenceReplaced\n";
+
+?>
+
+
+Q2A)
+
+1)
+import pandas as pd
+
+data = {
+    'Name': ['John', 'Emma', 'Michael', 'Olivia', 'William', 'Sophia', 'Jackson', 'Ava', 'Ethan', 'Lily'],
+    'Age': [25, 30, 28, 35, 40, 22, 38, 26, 32, 29],
+    'Percentage': [85, 90, 78, 92, 88, 76, 95, 89, 91, 84]
+}
+
+df = pd.DataFrame(data)
+
+print("Data Frame:")
+print(df)
+
+
+
+
+
+
+2)
+import pandas as pd
+
+data = {
+    'Name': ['John', 'Emma', 'Michael', 'Olivia', 'William', 'Sophia', 'Jackson', 'Ava', 'Ethan', 'Lily'],
+    'Age': [25, 30, 28, 35, 40, 22, 38, 26, 32, 29],
+    'Percentage': [85, 90, 78, 92, 88, 76, 95, 89, 91, 84]
+}
+
+df = pd.DataFrame(data)
+
+print("Shape of the DataFrame:")
+print(df.shape)
+
+print("\nNumber of rows and columns:")
+print("Rows:", df.shape[0])
+print("Columns:", df.shape[1])
+
+print("\nData types of each column:")
+print(df.dtypes)
+
+print("\nFeature names:")
+print(df.columns)
+
+print("\nDescription of the data:")
+print(df.describe())

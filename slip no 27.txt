@@ -1,0 +1,42 @@
+Q1)
+
+<html>
+  <body>
+    <form action="file1.php" method="POST">
+      Enter 1st file name
+      <input type="text" name="txt1" /><br />
+      Enter 2nd file name
+      <input type="text" name="txt2" /><br />
+      <input type="submit" value="copy" />
+    </form>
+  </body>
+</html>
+
+
+
+<?php
+$f1=$_POST['txt1'];
+$f2=$_POST['txt2'];
+$file1=fopen($f1,"r")or exit("cant open file");
+$file2=fopen($f2,"w")or exit("cant open file");
+while(!feof($file1))
+{
+$data=fread($file1,filesize($f1));
+fwrite($file2,$data);
+}
+echo "file appended";
+fclose($file1);
+fclose($file2);
+?>
+
+
+Q2A)
+
+
+import pandas as p
+from sklearn import preprocessing
+d = pd.read_csv('D:\\yogita\\Data.csv')
+label_encoder = preprocessing.LabelEncoder()
+d['purchased']= label_encoder.fit_transform(d['purchased'])
+one_hot_encoded_data = p.get_dummies(d, columns = ['country'])
+print(one_hot_encoded_data)
